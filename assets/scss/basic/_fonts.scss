@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'MuseoSansCyrl-light';
+    src: url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+         url('../fonts/MuseoSansCyrl-300.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl-medium';
+    src: url('../../fonts/MuseoSansCyrl-500.woff') format('woff'),
+         url('../../fonts/MuseoSansCyrl-500.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl-bold';
+    src: url('../../fonts/MuseoSansCyrl-700.woff') format('woff'),
+         url('../../fonts/MuseoSansCyrl-700.woff2') format('woff2');
+    font-weight: 700;
+}

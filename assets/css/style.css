@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "MuseoSansCyrl-light";
+  src: url("../fonts/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl-300.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "MuseoSansCyrl-medium";
+  src: url("../../fonts/MuseoSansCyrl-500.woff") format("woff"), url("../../fonts/MuseoSansCyrl-500.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MuseoSansCyrl-bold";
+  src: url("../../fonts/MuseoSansCyrl-700.woff") format("woff"), url("../../fonts/MuseoSansCyrl-700.woff2") format("woff2");
+  font-weight: 700;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+button:focus {
+  outline: 1px solid rgba(0, 0, 0, 0);
+}
+
+input {
+  display: block;
+  border: none;
+}
+input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0);
+}
+
+textarea {
+  display: block;
+  border: none;
+  resize: none;
+}
+textarea:focus {
+  outline: 1px solid rgba(0, 0, 0, 0);
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 32px 0;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 50px;
+}
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.header__right-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 12px;
+}
+.header__right-list > li {
+  display: block;
+  width: 40px;
+  height: 100%;
+}
+.header__right-list > li > a {
+  display: block;
+  width: 40px;
+  height: 100%;
+}
+.header__right-list > li > a > img {
+  width: 17px;
+  height: auto;
+}
+.header__right-list > li > img {
+  width: 17px;
+  height: auto;
+}
+.header__nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 54px;
+}
+.header__nav > ul > li {
+  position: relative;
+  padding: 15px 0;
+}
+.header__nav > ul > li:hover > ul {
+  display: block;
+}
+.header__nav > ul > li > ul {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: none;
+  padding: 10px 0;
+  width: 500px;
+  background-color: #fff;
+}
+.header__nav > ul > li > ul > li {
+  padding: 15px 0;
+}
+.header__nav > ul > li > ul > li > a {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #000;
+  font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+.header__nav > ul > li > ul > li > a:hover {
+  color: #ff8643;
+}
+.header__nav > ul > li > a {
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #000;
+  font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+.header__nav > ul > li > a:last-child {
+  color: #ff8643;
+  font-weight: 700;
+}
+.header__nav > ul > li > a:last-child::after {
+  display: none;
+}
+.header__nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -17px;
+  width: 10px;
+  height: 11px;
+  background: url("../icons/arrow.svg");
+}/*# sourceMappingURL=style.css.map */

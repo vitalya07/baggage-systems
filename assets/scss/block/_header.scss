@@ -1,0 +1,100 @@
+.header {
+    padding: 32px 0;
+    position: sticky;
+    top: 0;
+    background-color: $whiteColor;
+    &__wrapper {
+        @include flexSpaceBetween;
+    }
+    &__left {
+        @include flexStartCenter;
+        gap: 50px;
+    }
+    &__right {
+        @include flexEndCenter;
+        &-list {
+            @include flexEndCenter;
+            gap: 12px;
+            & > li {
+                display: block;
+                width: 40px;
+                height: 100%;
+                & > a {
+                    display: block;
+                    width: 40px;
+                    height: 100%;
+
+                    & > img {
+                        width: 17px;
+                        height: auto;
+                    }
+                }
+                & > img {
+                    width: 17px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    &__nav {
+        & > ul {
+            @include flexStartCenter;
+            gap: 54px;
+            & > li {
+                position: relative;
+                padding: 15px 0;
+                &:hover {
+                    & > ul {
+                        display: block;
+                    }
+                }
+                & > ul {
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    display: none;
+                    padding: 10px 0;
+                    width: 500px;
+                    background-color: $whiteColor;
+                    & > li {
+                        padding: 15px 0;
+                        & > a {
+                            transition: all .2s ease;
+                            color: $blackColor;
+                            font-family: 'MuseoSansCyrl-light', Arial, Helvetica, sans-serif;
+                            font-weight: 300;
+                            font-size: 14px;
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+                & > a {
+                    position: relative;
+                    transition: all .2s ease;
+                    color: $blackColor;
+                    font-family: 'MuseoSansCyrl-light', Arial, Helvetica, sans-serif;
+                    font-weight: 300;
+                    font-size: 14px;
+                    &:last-child {
+                        color: $mainColor;
+                        font-weight: 700;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        right: -17px;
+                        width: 10px;
+                        height: 11px;
+                        background: url('../icons/arrow.svg');
+                    }
+                }
+            }
+        }
+    }
+}
