@@ -17,4 +17,16 @@
 }
 .dark-btn {
     border: 1px solid $blackColor !important;
+    &:hover {
+        border: 1px solid $mainColor !important;
+        color: $mainColor !important;
+    }
+}
+.btn {
+    background-color: $mainColor;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.hide {
+    display: none;    
 }
