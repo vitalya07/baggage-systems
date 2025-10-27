@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', (e)=> {
         } else { 
             informationBtn.textContent = `Скрыть текст`;
         }
-    });
-   
+    });  
     
 })
