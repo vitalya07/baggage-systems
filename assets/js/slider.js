@@ -10,14 +10,28 @@ new Swiper('.main-swiper', {
     delay: 2000,  // Задержка между переходами (в мс)  
     disableOnInteraction: false,  // Автопрокрутка не останавливается при взаимодействии  
   }, 
+  spaceBetween:27,
 });
 new Swiper('.sistems-swiper', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
+  navigation: { nextEl: '.sistems__swiper-next', prevEl: '.sistems__swiper-prev', },
+  speed: 500,
+  slidesPerView: 4, 
+  spaceBetween: -20
+});
+new Swiper('.news__swiper', {
+  direction: 'horizontal',
+  loop: false,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.news-pagination',
     clickable: true,
   },
-  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
   speed: 1000,
+  // autoplay: {  
+  //   delay: 2000,  
+  //   disableOnInteraction: false, 
+  // }, 
+  slidesPerView: 3, 
+  spaceBetween: 27,
 });
