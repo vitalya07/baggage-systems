@@ -37,6 +37,13 @@ a {
   text-decoration: none;
 }
 
+b {
+  font-family: "MuseoSansCyrl-bold", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
 button {
   border: none;
 }
@@ -104,7 +111,13 @@ img {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.showFlex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .sistems__swiper-arrow {
@@ -656,4 +669,104 @@ img {
 }
 .news__archive {
   background-color: #f9f9f9;
+}
+
+.information {
+  padding: 80px;
+}
+.information__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+.information__wrapper-hide {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 4s ease;
+  transition: all 4s ease;
+}
+.information__title {
+  font-family: "MuseoSansCyrl-medium", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-size: 1.75rem;
+  margin-bottom: 46px;
+}
+.information__descr {
+  font-size: 16px;
+  font-family: "MuseoSansCyrl-medium", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #a6aaab;
+}
+.information__left {
+  width: 45%;
+}
+.information__right {
+  width: 45%;
+}
+.information__btn {
+  border: 1px solid #ff8643;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 175px;
+  padding: 9px 15px;
+  background: none;
+  color: #ff8643;
+  font-family: "MuseoSansCyrl-medium", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.information__btn:hover {
+  background-color: #ff8643;
+  color: #fff;
+}
+.information__list {
+  list-style-type: disc;
+}
+.information__list-item {
+  font-size: 16px;
+  font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.information__hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

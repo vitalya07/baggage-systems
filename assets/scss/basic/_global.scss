@@ -29,7 +29,10 @@
     transition: all .4s ease;
 }
 .hide {
-    display: none;    
+    display: none !important;    
+}
+.showFlex {
+    display: flex !important;  
 }
 .sistems__swiper-arrow {
     width: 50px;
