@@ -1136,6 +1136,10 @@ img {
   .news__item {
     width: 320px;
   }
+  .custom-logo {
+    width: 60px;
+    height: auto;
+  }
 }
 @media (max-width: 450px) {
   .main__item-title {
