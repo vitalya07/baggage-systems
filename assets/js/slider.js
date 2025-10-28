@@ -26,16 +26,24 @@ new Swiper('.sistems-swiper', {
     },
     990: {
       slidesPerView: 3, 
-      spaceBetween: -20,
+      spaceBetween: 100,
     },
     760: {
       slidesPerView: 2, 
       spaceBetween: -40,
     },
-    460: {
-      slidesPerView: 1, 
+    550: {
+      slidesPerView: 2, 
       spaceBetween: -20,
-    }
+    },
+    // 450: {
+    //   slidesPerView: 1, 
+    //   spaceBetween: -20,
+    // },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: -20,
+    },
   }
 });
 new Swiper('.news__swiper', {
@@ -46,10 +54,20 @@ new Swiper('.news__swiper', {
     clickable: true,
   },
   speed: 1000,
-  // autoplay: {  
-  //   delay: 2000,  
-  //   disableOnInteraction: false, 
-  // }, 
   slidesPerView: 3, 
   spaceBetween: 27,
+  breakpoints: {
+    760: {
+      slidesPerView: 3, 
+      spaceBetween: 27,
+    },
+    550: {
+      slidesPerView: 2, 
+      spaceBetween: 10,
+    },
+    320: {
+      slidesPerView: 1, 
+      spaceBetween: -80,
+    },
+  }
 });

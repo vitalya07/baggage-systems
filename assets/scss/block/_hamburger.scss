@@ -1,11 +1,11 @@
 .hamburger {
     width: 40px;
     height: 40px;
-    background-color: $grayColor2;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     display: none;
+    z-index: 30;
     & > span {
         display: block;
         position: absolute;
@@ -18,9 +18,11 @@
         transform: translate(-50%, -50%);       
         &:first-child {
             top: 30%;
+            transition: all .4s ease;
         }
         &:last-child {
             top: 70%;
+            transition: all .4s ease;
         }
     }
 }

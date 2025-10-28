@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
             informationBtn.textContent = `Скрыть текст`;
         }
     });    
-    //Раскрытие меню на мобильном
-    const headerMobile = document.querySelector('.header__mobile');
+    //Раскрытие элементов меню на мобильном
     const headerMobileLi = document.querySelectorAll('.header__mobile > ul > li');
     headerMobileLi.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -23,4 +22,11 @@ document.addEventListener('DOMContentLoaded', (e)=> {
             }
         });
     });
+    //Открытие мобильного меню
+    const header = document.querySelector('.header');
+    const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', (e)=> {
+        header.classList.toggle('menu__active');
+    })
 })

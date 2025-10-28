@@ -3,6 +3,11 @@
     padding: 0 15px;
     margin: 0 auto;
 }
+.body__container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
 .swiper-pagination-bullet {
     background-color: $whiteColor;
     opacity: 1;
@@ -32,7 +37,7 @@
     display: none !important;    
 }
 .show {
-    display: block !important;   
+    display: block !important;    
 }
 .showFlex {
     display: flex !important;  
