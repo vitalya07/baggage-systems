@@ -18,7 +18,25 @@ new Swiper('.sistems-swiper', {
   navigation: { nextEl: '.sistems__swiper-next', prevEl: '.sistems__swiper-prev', },
   speed: 500,
   slidesPerView: 4, 
-  spaceBetween: -20
+  spaceBetween: -20,
+  breakpoints: {
+    1260: {
+      slidesPerView: 3, 
+       spaceBetween: -20,
+    },
+    990: {
+      slidesPerView: 3, 
+      spaceBetween: -20,
+    },
+    760: {
+      slidesPerView: 2, 
+      spaceBetween: -40,
+    },
+    460: {
+      slidesPerView: 1, 
+      spaceBetween: -20,
+    }
+  }
 });
 new Swiper('.news__swiper', {
   direction: 'horizontal',

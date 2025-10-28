@@ -1,7 +1,9 @@
 .information {
     padding: 80px;
     &__wrapper {
-        @include flexSpaceBetween;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
         margin-bottom: 40px;
         &-hide {
             margin-bottom: 40px;
@@ -13,7 +15,7 @@
     }
     &__title {
         @include fontsMedium;
-        font-size: 1.75rem; 
+        font-size: 26px; 
         margin-bottom: 46px;   
     }
     &__descr {

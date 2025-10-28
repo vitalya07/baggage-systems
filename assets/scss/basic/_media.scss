@@ -1,0 +1,38 @@
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+    .header {
+        &__left {
+            gap: 30px;
+        }
+        &__nav {
+            & > ul {
+                gap: 35px;
+            }
+        }
+        &__right  {
+            &-list {
+                gap: 0;
+            }
+        }
+    }
+    .information {
+        &__title {
+            font-size: 23px;
+        }
+        &__desctr {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        max-width: 993px;
+    }
+}
+@media (max-width: 993px) {
+    .container {
+        max-width: 768px;
+    }
+}
