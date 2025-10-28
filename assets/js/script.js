@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', (e)=> {
         } else { 
             informationBtn.textContent = `Скрыть текст`;
         }
-    });  
-    
+    });    
+    //Раскрытие меню на мобильном
+    const headerMobile = document.querySelector('.header__mobile');
+    const headerMobileLi = document.querySelectorAll('.header__mobile > ul > li');
+    headerMobileLi.forEach(item => {
+        item.addEventListener('click', (e) => {
+            let submenu = item.querySelector('ul');             
+            if(submenu){
+                submenu.classList.toggle('show');
+            }
+        });
+    });
 })
