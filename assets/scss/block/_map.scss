@@ -1,0 +1,29 @@
+.map__box {
+    position: relative;
+    padding: 100px 0;
+    width: 100%;
+    height: 600px;
+}
+.map__select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    z-index: 10;
+}
+.buy__map {
+    position: absolute;
+    width: 100%;
+    height: 600px !important;
+    padding: 100px 0;
+}
+#map {
+    height: 900px;
+}
+.ymaps-2-1-79-map{
+    height: 900px !important;
+}
+.ymaps-2-1-79-map .ymaps-2-1-79-i-ua_js_yes .ymaps-2-1-79-map-bg .ymaps-2-1-79-islets_map-lang-ru {
+    height: 900px !important;
+}
