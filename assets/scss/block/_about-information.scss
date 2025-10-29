@@ -1,0 +1,27 @@
+.about__information {
+    padding: 80px 0;
+    &-descr {
+        @include fontsLight;
+        font-size: 16px;
+        color: $blackColor;
+        margin-bottom: 20px;
+    }
+    &-list {
+        list-style-type: disc;
+        margin-bottom: 30px;
+    }
+    &-item {
+        @include fontsLight;
+        font-size: 16px;
+        color: $blackColor;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    &-download {
+        display: block;
+        @include fontsMedium;
+        color: $mainColor;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}

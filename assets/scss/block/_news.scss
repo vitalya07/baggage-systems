@@ -66,7 +66,64 @@
         @include flexCenter;
         margin-top: 30px;
     }
-   &__archive {
+    &__archive {
         background-color: $grayColor2;
-   }
+    }
+    &-page {
+        padding:100px 0 80px 0;
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        &__item {
+            // background-color: $grayColor2;
+            border: 1px solid $grayColor3;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            & > picture {
+                width: 100%;
+                height: auto;
+                & > img {
+                    width: 100%;
+                }
+            }
+            &-inner {
+                padding: 30px;
+                position: relative;
+            }
+            &-date {
+                @include fontsLight;
+                font-size: 16px;
+                color: $grayColor;
+                margin-bottom: 23px;
+            }
+            &-title {
+                @include fontsLight;
+                font-size: 20px;
+                color: $blackColor;
+                margin-bottom: 22px;
+                transition: all .4s ease;
+            }
+            &-more {
+                font-size: 12px;
+                @include fontsLight;
+                color: $blackColor;
+                text-transform: uppercase;
+                transition: all .4s ease;
+            }
+            &-bottom {
+                @include flexStartCenter;
+                & > img {
+                    transform: rotate(-90deg);
+                }
+            }
+            &:hover {
+                .news-page__item-title, .news-page__item-more {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
 }

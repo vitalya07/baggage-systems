@@ -25,10 +25,36 @@
             font-size: 14px;
         }
     }
+    .sitebar {
+        top: 20%;
+        left: 5%;
+        width: 15%;
+    }
+    .about {
+        &__main {
+            width: 60%;
+            margin: 0 auto;
+        }
+        &__information {
+             width: 60%;
+            margin: 0 auto;
+        }
+    }
 }
 @media (max-width: 1024px) {
     .container {
         max-width: 993px;
+    }    
+    .sitebar {
+        display: none;
+    }
+    .about {    
+        &__main {
+            width: 100%;
+        }
+        &__information {
+            width: 100%;
+        }
     }
 }
 @media (max-width: 993px) {
@@ -38,6 +64,9 @@
     .header {
         &__nav {
             display: none;
+        }
+        &__lang-item{
+            display: none !important;
         }
     }
     .hamburger {
@@ -118,6 +147,18 @@
         }
         &__list {
             margin-left: 30px;
+        }
+    }
+    .about {
+        &__main {
+            &-prev {
+                & > img {
+                    width: 100%;
+                }
+                & > iframe {
+                    width: 100%;
+                }
+            }
         }
     }
     .footer {

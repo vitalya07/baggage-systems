@@ -1,0 +1,37 @@
+.about {
+    &__wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+    }
+    // &__sitebar {     
+    //     position: fixed;  
+    //     top: 10%;
+    //     left: 10%;
+    //     width: 10%;     
+    //     border: 1px solid $grayColor3;   
+    //     box-shadow: 10px 10px 20px $grayColor3;
+    //     padding: 10px;
+    // }
+    // &__nav {
+    //     & > ul {
+    //         & > li {
+    //             margin-bottom: 10px;
+    //             & > a {
+    //                 @include fontsLight;
+    //                 font-size: 16px;
+    //                 color: $blackColor;
+    //                 transition: all .4s ease;
+    //                 &:hover {
+    //                     color: $mainColor;
+    //                 }
+    //             }
+               
+    //         }
+    //     }
+    // }
+    // &__right {
+    //     width: 65%;
+    // }
+}
