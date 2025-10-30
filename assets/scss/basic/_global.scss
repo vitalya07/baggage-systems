@@ -106,13 +106,20 @@
     font-size: 20px;
     margin-bottom: 30px;
 }
+.wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.box {
+    width: 80%;
+}
 .sitebar {
-    position: fixed;  
-    top: 15%;
-    left: 10%;
-    width: 10%;     
+    // position: fixed;  
+    // top: 15%;
+    // left: 10%;
+    width: 18%;    
     border: 1px solid $grayColor3;   
-    box-shadow: 10px 10px 20px $grayColor3;
     padding: 10px;
     &__news {
         display: none;
@@ -136,3 +143,4 @@
     }
     
 }
+input[type="radio"] { accent-color: $mainColor;}
