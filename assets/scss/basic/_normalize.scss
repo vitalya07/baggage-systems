@@ -18,6 +18,7 @@ b {
     @include fontsBold;
 }
 button {
+    background: none;
    border: none;
     &:focus {
       outline: 1px solid #00000000;

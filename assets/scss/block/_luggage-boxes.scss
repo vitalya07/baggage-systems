@@ -1,54 +1,92 @@
-.luggage__boxes {
-    &-title {
-        @include fontsBold;
-        font-size: 14px;
-        color: $blackColor;
-        margin-bottom: 35px;
-    }
-    &-choice {
-        margin: 0;
-    }
-    &-form {
-        @include flexStar;
-    }
-    &-selection {
-        padding: 0;
-        padding-bottom: 20px;
-        margin-bottom: 50px;
-        border-bottom: 1px solid $whiteColor2;
-    }
-    &-sel {
-        height: 33px;
-        background: url('../icons/arrow.svg') no-repeat right 20px top 8px / 13px;
-    }
-    &-all {
-        margin-bottom: 35px;
-        padding-bottom: 35px;
-        border-bottom: 1px solid $whiteColor2;
-    }
-    &-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-        gap: 20px;
-    }
-    &-item {
-        display: block;
-        &:hover {
-            .luggage__boxes-subtitle {
-                color: $mainColor;
+.luggage {
+    &__boxes  {
+        &-title {
+            @include fontsBold;
+            font-size: 14px;
+            color: $blackColor;
+            margin-bottom: 35px;
+        }
+        &-choice {
+            margin: 0;
+        }
+        &-form {
+            @include flexStar;
+        }
+        &-selection {
+            padding: 0;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid $whiteColor2;
+        }
+        &-sel {
+            height: 33px;
+            background: url('../icons/arrow.svg') no-repeat right 20px top 8px / 13px;
+        }
+        &-all {
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid $whiteColor2;
+        }
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+            gap: 20px;
+        }
+        &-item {
+            display: block;
+            &:hover {
+                .luggage__boxes-subtitle {
+                    color: $mainColor;
+                }
             }
         }
-    }
-    &-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-    &-subtitle {
-        transition: all .4s ease;
-        @include  fontsBold;
-        font-size: 12px;
-        color: $blackColor;
-        text-align: center;
+        &-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        &-subtitle {
+            transition: all .4s ease;
+            @include  fontsBold;
+            font-size: 12px;
+            color: $blackColor;
+            text-align: center;
+        }    
+    }   
+    &__sorting {
+        @include flexSpaceBetween;
+        &-left {
+            @include flexStar;
+            gap: 20px;
+        }
+        &-title {
+            @include fontsMedium;
+            color: $blackColor;
+            font-size: 14px;
+        }
+        &-item {
+            @include fontsLight;
+            color: $grayColor;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        &-active {
+            color: $mainColor;
+        }
+        &-right {
+            @include flexEnd;
+            gap: 10px;
+        }
+        &-btn {
+            width: 16px;
+            height: 16px;   
+            cursor: pointer;        
+        }
+        &-grid {
+            background: linear-gradient($grayColor, $grayColor) no-repeat 0 0 / 7px 7px, linear-gradient($grayColor, $grayColor) no-repeat 100% 0 / 7px 7px, linear-gradient($grayColor, $grayColor) no-repeat 0 100% / 7px 7px, linear-gradient($grayColor, $grayColor) no-repeat 100% 100% / 7px 7px;
+        }
+        &-list {
+            background: linear-gradient($grayColor, $grayColor) no-repeat 0 0 / 100% 4px, linear-gradient($grayColor, $grayColor) no-repeat 0 6px / 100% 4px, linear-gradient($grayColor, $grayColor) no-repeat 0 100% / 100% 4px;
+        }
     }
 }
