@@ -9,10 +9,12 @@
     border: 1px solid $whiteColor2; 
     border-radius: 5px;  
     transition: all .4s ease;
+    position: relative;
     &__images {
         position: relative;
         height: 160px;
         overflow: hidden;
+        width: 80%;
         &-switch {
             position: absolute;
             left: 0;
@@ -80,11 +82,13 @@
         }
     }
     &__link {
+        display: block;
         @include fontsLight;
         font-size: 14px;
         color: $blackColor;
         text-align: center;
         margin-bottom: 15px;
+        width: 80%;
         &:hover {
             color: $mainColor;
         }
@@ -133,6 +137,43 @@
         box-shadow: 0px 0px 10px$grayColor;
         .product__bottom {
             @include flexCenter;
+        }
+    }
+    &__colors {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 20;        
+        &-color {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            border: 1px solid $grayColor3;
+            cursor: pointer;
+        }
+        &-Black-matte {
+            background-color: $blackColor;
+        }
+        &-Glossy-black {
+            background-color: #000406;
+        }
+        &-Glossy-grey {
+            background-color: #bebebe;
+        }
+        &-Glossy-white {
+            background-color: $whiteColor;
+        }
+        &-Dark-grey-matte {
+            background-color: #677176;
+        }
+        &-is-active {
+            border: 1px solid $mainColor;
         }
     }
 }

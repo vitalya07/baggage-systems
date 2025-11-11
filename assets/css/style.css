@@ -1549,11 +1549,13 @@ input[type=radio] {
   border-radius: 5px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  position: relative;
 }
 .product__images {
   position: relative;
   height: 160px;
   overflow: hidden;
+  width: 80%;
 }
 .product__images-switch {
   position: absolute;
@@ -1634,6 +1636,7 @@ input[type=radio] {
   background-color: #ff8643;
 }
 .product__link {
+  display: block;
   font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 120%;
@@ -1642,6 +1645,7 @@ input[type=radio] {
   color: #000;
   text-align: center;
   margin-bottom: 15px;
+  width: 80%;
 }
 .product__link:hover {
   color: #ff8643;
@@ -1703,6 +1707,52 @@ input[type=radio] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.product__colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  z-index: 20;
+}
+.product__colors-color {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+}
+.product__colors-Black-matte {
+  background-color: #000;
+}
+.product__colors-Glossy-black {
+  background-color: #000406;
+}
+.product__colors-Glossy-grey {
+  background-color: #bebebe;
+}
+.product__colors-Glossy-white {
+  background-color: #fff;
+}
+.product__colors-Dark-grey-matte {
+  background-color: #677176;
+}
+.product__colors-is-active {
+  border: 1px solid #ff8643;
 }
 
 .footer {
