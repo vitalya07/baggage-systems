@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const boxes = document.querySelector('.luggage__boxes').offsetHeight;
     const products = document.querySelector('.products').offsetHeight;
     i = boxes + products;
-    filter.style.height = `boxes + products - 1000px`;
-    
+    filter.style.height = `${i}px`;
+    console.log(filter.offsetHeight)
     function filterFixed() {
         if(window.scrollY > 150) {
             filterBox.style.position = 'sticky';
