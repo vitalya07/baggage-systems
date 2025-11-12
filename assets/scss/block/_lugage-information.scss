@@ -1,0 +1,54 @@
+.lugage__information {
+    padding: 16px 0 178px 0;
+    &-situation {
+        @include fontsLight;
+        font-size: 16px;
+        line-height: 1.38;
+        color: $blackColor;
+        margin-bottom: 53px;
+    }
+    &-box {
+        margin-bottom: 53px;
+    }
+    &-title {
+        @include fontsMedium;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    &-list {
+        list-style: disc;
+        margin-left: 40px;
+    }
+    &-item {
+        margin-bottom: 15px;
+        @include fontsLight;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $blackColor;
+    }
+    &-paragraph {
+        margin-bottom: 15px;
+        @include fontsLight;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $blackColor;
+    }
+    &-article {
+        margin-bottom: 15px;
+        @include fontsLight;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $blackColor;
+    }
+    &-link {
+         margin-bottom: 15px;
+        @include fontsLight;
+        font-size: 16px;
+        line-height: 1.8;
+        color: $mainColor;
+        transition: all .4s ease;
+        &:hover {
+            color: $mainColor2;
+        }
+    }
+}
