@@ -44,6 +44,8 @@
             width: 100%;
             height: auto;
             margin-bottom: 10px;
+            display: block;
+           
         }
         &-subtitle {
             transition: all .4s ease;
@@ -64,7 +66,7 @@
             color: $blackColor;
             font-size: 14px;
         }
-        &-item {
+        &-item {            
             @include fontsLight;
             color: $grayColor;
             font-size: 14px;
