@@ -1792,7 +1792,20 @@ input[type=radio] {
   cursor: pointer;
   margin-bottom: 14px;
 }
-.fillter__item:last-child {
+.fillter__item-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.fillter__item-color:last-child {
   margin-bottom: 45px;
 }
 .fillter__checkbox {
@@ -1848,6 +1861,44 @@ input[type=radio] {
 .fillter__btn:hover {
   background-color: #ff8643;
   color: #fff;
+}
+
+.range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 10px;
+}
+.range__min-input {
+  width: 100%;
+}
+.range__max-input {
+  width: 100%;
+}
+.range__input {
+  border: 1px solid #efefef;
+  width: 100%;
+  padding: 0 9px;
+  height: 34px;
+  display: block;
+}
+.range__dash {
+  width: 17px;
+  height: 3px;
+  background-color: #a6aaab;
+}
+.range__valute {
+  font-family: "MuseoSansCyrl-light", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-size: 14px;
 }
 
 .lugage__information {
