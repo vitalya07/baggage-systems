@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>багажный бокс</title>
     <meta name="description" content="Описание сайта">
+    <link rel="stylesheet" href="assets/css/nouislider.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -175,16 +176,16 @@
                             <div class="fillter__items">
                                 <div class="fillter__title">Цена</div>
                                 <div class="range">
-                                    <div class="range__min-input">
-                                        <input type="text" class="range__input" id="min-price">
-                                    </div>                                   
+                                    <label class="range__min-input range__label">
+                                        <input type="number" class="range__input" min="300" max="55000" id="min-price" placeholder="300">
+                                    </label>                                   
                                     <div class="range__dash"></div>
-                                    <div class="range__max-input">
-                                        <input type="text" class="range__input" id="max-price">
-                                    </div>
+                                    <label class="range__max-input range__label">
+                                        <input type="number" class="range__input" min="300" max="55000" id="max-price" placeholder="52 000">
+                                    </label>
                                     <div class="range__valute">₽</div>
                                 </div>
-                                
+                               <div class="range__slider" id="range-slider"></div>
                             </div>  
                             <div class="fillter__items">
                                 <div class="fillter__title">Цвет</div>
@@ -918,5 +919,6 @@
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/products.js"></script>
     <script src="assets/js/filter.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
 </body>
 </html>

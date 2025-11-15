@@ -35,7 +35,9 @@
     }
     &__checkbox {
         margin-top: 3px;
-        background-color: $mainColor;
+        accent-color: $mainColor;
+        color: $whiteColor;
+        cursor: pointer;
     }
     &__label {
         @include fontsLight;
@@ -68,31 +70,5 @@
             background-color: $mainColor;
             color: $whiteColor;
         }
-    }
-}
-.range {
-    @include flexStartCenter;
-    gap: 10px;
-    &__min-input {
-        width: 100%;        
-    }
-    &__max-input {
-        width: 100%;
-    }
-    &__input {
-        border: 1px solid $whiteColor2;
-        width: 100%;
-        padding: 0 9px;
-        height: 34px;
-        display: block;
-    }
-    &__dash {
-        width: 17px;
-        height: 3px;
-        background-color: $grayColor;
-    }
-    &__valute {
-        @include fontsLight;
-        font-size: 14px;
     }
 }

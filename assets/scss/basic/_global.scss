@@ -144,3 +144,31 @@
     
 }
 input[type="radio"] { accent-color: $mainColor;}
+.noUi-target {
+    background-color: $grayColor;
+    border: none;
+    border-radius: 100px;
+    box-shadow: none;
+    height: 2px;
+    width: 100%;
+}
+.noUi-connect {
+    background-color: $mainColor;
+}
+.noUi-handle {
+    border-radius: 100%;
+    background-color: $mainColor;
+    box-shadow: none;
+    &::after {
+        display: none;
+    }
+    &::before {
+        display: none;
+    }
+}
+.noUi-horizontal .noUi-handle {
+    width: 12px;
+    height: 12px;
+    right: 0;
+    
+}
