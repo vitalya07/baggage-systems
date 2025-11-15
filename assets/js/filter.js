@@ -55,4 +55,123 @@ document.addEventListener('DOMContentLoaded', ()=> {
             })
         })
     }
+    // let mixer = mixitup('.products')
+// ---------------------------------------------
+//  ИНИЦИАЛИЗАЦИЯ MIXITUP V2
+// ---------------------------------------------
+var mixer = mixitup('.products', {
+    selectors: {
+        target: '.product'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+// ---------------------------------------------
+//  ОЧЕРЕДЬ ДЛЯ SAFE-V2 (fix: instance busy)
+// ---------------------------------------------
+function filterQueue(command) {
+    if (mixer.isMixing()) {
+
+        var handler = function() {
+            mixer.off('mixEnd', handler);
+            filterQueue(command);
+        };
+
+        mixer.on('mixEnd', handler);
+
+    } else {
+        mixer.filter(command);
+    }
+}
+
+// ---------------------------------------------
+//  ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ
+// ---------------------------------------------
+var filterCheckboxes = document.querySelectorAll('.fillter__checkbox');
+var allProductsCheckbox = document.getElementById('all-product');
+
+var activeFilters = [];
+var isUpdating = false;
+
+filterCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+
+        if (isUpdating) return;
+
+        var label = checkbox.nextElementSibling;
+        var filterValue = label ? label.dataset.filter : null;
+
+        // -------- ALL PRODUCTS --------
+        if (checkbox === allProductsCheckbox) {
+
+            isUpdating = true;
+
+            // Сбрасываем остальные чекбоксы
+            filterCheckboxes.forEach(function(cb) {
+                if (cb !== allProductsCheckbox) cb.checked = false;
+            });
+
+            activeFilters = [];
+
+            isUpdating = false;
+
+            filterQueue('all');
+            return;
+        }
+
+        // Снимаем "Все товары", если включили другие
+        if (checkbox.checked) {
+            isUpdating = true;
+            allProductsCheckbox.checked = false;
+            isUpdating = false;
+
+            activeFilters.push(filterValue);
+        } else {
+            activeFilters = activeFilters.filter(function(f) {
+                return f !== filterValue;
+            });
+        }
+
+        // Ничего не выбрано → показать все
+        if (activeFilters.length === 0) {
+            filterQueue('all');
+        } else {
+            filterQueue(activeFilters.join(','));
+        }
+    });
+});
+
+// ---------------------------------------------
+//  ФИЛЬТР ЦЕНЫ
+// ---------------------------------------------
+var minInput = document.getElementById('min-price');
+var maxInput = document.getElementById('max-price');
+
+function applyPriceFilter() {
+    var min = parseInt(minInput.value) || 0;
+    var max = parseInt(maxInput.value) || 9999999;
+
+    // микситап фильтрация через функцию
+    filterQueue(function(item) {
+        var price = parseInt(item.dom.el.dataset.price);
+        return price >= min && price <= max;
+    });
+}
+
+minInput.addEventListener('input', applyPriceFilter);
+maxInput.addEventListener('input', applyPriceFilter);
+
+// ---------------------------------------------
+//  СОРТИРОВКА
+// ---------------------------------------------
+document.getElementById('sort-price-asc')?.addEventListener('click', function() {
+    mixer.sort('data-price:asc');
+});
+
+document.getElementById('sort-price-desc')?.addEventListener('click', function() {
+    mixer.sort('data-price:desc');
+});
+
 });

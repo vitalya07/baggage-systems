@@ -150,27 +150,27 @@
                                 <div class="fillter__title">Показывать</div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="all-product">
-                                    <div class="flilter__label">Все товары</div>
+                                    <div class="flilter__label" data-filter="all">Все товары</div>
                                 </div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="Roof-racks">
-                                    <div class="flilter__label">Багажники на крышу</div>
+                                    <div class="flilter__label" data-filter=".category-a" >Багажники на крышу</div>
                                 </div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="Luggage-basketss">
-                                    <div class="flilter__label">Багажные корзины</div>
+                                    <div class="flilter__label" data-filter=".category-b">Багажные корзины</div>
                                 </div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="Bicycle-fasteners">
-                                    <div class="flilter__label">Велокрепления</div>
+                                    <div class="flilter__label" data-filter=".category-c">Велокрепления</div>
                                 </div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="snowboard">
-                                    <div class="flilter__label">Крепления для перевозки лыж и сноубордов</div>
+                                    <div class="flilter__label" data-filter=".category-d">Крепления для перевозки лыж и сноубордов</div>
                                 </div>
                                 <div class="fillter__item">
                                     <input type="checkbox" class="fillter__checkbox" id="Related-products">
-                                    <div class="flilter__label">Сопутствующие товары</div>
+                                    <div class="flilter__label" data-filter=".category-e">Сопутствующие товары</div>
                                 </div>
                             </div>  
                             <div class="fillter__items">
@@ -522,7 +522,7 @@
                         </section>
                         <section class="products">
                             <!-- Карточка 1 -->
-                            <article class="product">
+                            <article class="mix product category-a" data-order="1" data-price="52000">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -563,7 +563,7 @@
                                 </div>
                             </article>
                             <!-- Карточка 2 -->
-                            <article class="product">
+                            <article class="mix product category-b" data-order="2" data-price="36800">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -607,7 +607,7 @@
                                 </div>
                             </article>
                             <!-- Карточка 3 -->
-                            <article class="product">
+                            <article class="mix product category-a category-b" data-order="3" data-price="34700">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -656,7 +656,7 @@
                                 </div>
                             </article>
                             <!-- Карточка 4 -->
-                            <article class="product">
+                            <article class="mix product category-c" data-order="4" data-price="33400">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -700,7 +700,7 @@
                                 </div>
                             </article>
                             <!-- Карточка 5 -->
-                            <article class="product">
+                            <article class="mix product category-b category-c" data-order="5" data-price="31400">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -744,7 +744,7 @@
                                 </div>
                             </article>
                              <!-- Карточка 6 -->
-                            <article class="product">
+                            <article class="mix product category-a category-d" data-order="6" data-price="30400">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -788,7 +788,7 @@
                                 </div>
                             </article>
                             <!-- Карточка 7 -->
-                            <article class="product">
+                            <article class="mix product category-e" data-order="7" data-price="26500">
                                 <div class="product__images">
                                     <div class="product__images-switch">
                                         <div class="product__images-item">
@@ -920,5 +920,6 @@
     <script src="assets/js/products.js"></script>
     <script src="assets/js/filter.js"></script>
     <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
 </body>
 </html>
