@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
         filterFixed();
     });
     //Прилипание фильтра конец   
+    
+    //range slider начало
     const rangeSlider = document.querySelector('#range-slider');
     if(rangeSlider) {
         noUiSlider.create(rangeSlider , {
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         
         rangeSlider.noUiSlider.on('update', function(values, handel) {
             prices[handel].value = Math.round(values[handel]);
+            filterByPrice(); 
         });
 
         const setRangeSlider = (i, value) => {
@@ -53,125 +56,63 @@ document.addEventListener('DOMContentLoaded', ()=> {
             el.addEventListener('change', (e)=> {
                 setRangeSlider(index, e.currentTarget.value)
             })
-        })
-    }
-    // let mixer = mixitup('.products')
-// ---------------------------------------------
-//  ИНИЦИАЛИЗАЦИЯ MIXITUP V2
-// ---------------------------------------------
-var mixer = mixitup('.products', {
-    selectors: {
-        target: '.product'
-    },
-    animation: {
-        duration: 300
-    }
-});
+        });
+        
 
-// ---------------------------------------------
-//  ОЧЕРЕДЬ ДЛЯ SAFE-V2 (fix: instance busy)
-// ---------------------------------------------
-function filterQueue(command) {
-    if (mixer.isMixing()) {
+       const product = document.querySelectorAll('.product');
 
-        var handler = function() {
-            mixer.off('mixEnd', handler);
-            filterQueue(command);
-        };
+        product.forEach(el => {
+            // Берём цену товара и приводим к числу
+            let dataPrice = Number(el.getAttribute('data-price'));
 
-        mixer.on('mixEnd', handler);
+            // Берём минимальное и максимальное значения из input тоже как числа
+            let minPriceInput = Number(minPrice.value) || 0;
+            let maxPriceInput = Number(maxPrice.value) || Infinity;
 
-    } else {
-        mixer.filter(command);
-    }
-}
+            // Проверяем диапазон
+            if (dataPrice >= minPriceInput && dataPrice <= maxPriceInput) {
+                el.style.display = "";     // показываем
+            } else {
+                el.style.display = "none"; // скрываем
+            }
+        });
 
-// ---------------------------------------------
-//  ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ
-// ---------------------------------------------
-var filterCheckboxes = document.querySelectorAll('.fillter__checkbox');
-var allProductsCheckbox = document.getElementById('all-product');
+        minPrice.addEventListener("input", filterByPrice);
+        maxPrice.addEventListener("input", filterByPrice);
 
-var activeFilters = [];
-var isUpdating = false;
+        function filterByPrice() {
+            const product = document.querySelectorAll('.product');
 
-filterCheckboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
+            product.forEach(el => {
+                let dataPrice = Number(el.getAttribute('data-price'));
+                let minPriceInput = Number(minPrice.value) || 0;
+                let maxPriceInput = Number(maxPrice.value) || Infinity;
 
-        if (isUpdating) return;
-
-        var label = checkbox.nextElementSibling;
-        var filterValue = label ? label.dataset.filter : null;
-
-        // -------- ALL PRODUCTS --------
-        if (checkbox === allProductsCheckbox) {
-
-            isUpdating = true;
-
-            // Сбрасываем остальные чекбоксы
-            filterCheckboxes.forEach(function(cb) {
-                if (cb !== allProductsCheckbox) cb.checked = false;
-            });
-
-            activeFilters = [];
-
-            isUpdating = false;
-
-            filterQueue('all');
-            return;
-        }
-
-        // Снимаем "Все товары", если включили другие
-        if (checkbox.checked) {
-            isUpdating = true;
-            allProductsCheckbox.checked = false;
-            isUpdating = false;
-
-            activeFilters.push(filterValue);
-        } else {
-            activeFilters = activeFilters.filter(function(f) {
-                return f !== filterValue;
+                if (dataPrice >= minPriceInput && dataPrice <= maxPriceInput) {
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
             });
         }
 
-        // Ничего не выбрано → показать все
-        if (activeFilters.length === 0) {
-            filterQueue('all');
-        } else {
-            filterQueue(activeFilters.join(','));
-        }
-    });
-});
 
-// ---------------------------------------------
-//  ФИЛЬТР ЦЕНЫ
-// ---------------------------------------------
-var minInput = document.getElementById('min-price');
-var maxInput = document.getElementById('max-price');
+        const numbers = [5, 12, 8, 130, 44];  
+        const filteredNumbers = numbers.filter(number => number > 10);  
+        console.log(filteredNumbers); // [12, 130, 44] 
+    }
+    //range slider конец
 
-function applyPriceFilter() {
-    var min = parseInt(minInput.value) || 0;
-    var max = parseInt(maxInput.value) || 9999999;
+    //сортировка продуктов начало
+    let mixer = mixitup('.products');
+    //сортировка продуктов конец
 
-    // микситап фильтрация через функцию
-    filterQueue(function(item) {
-        var price = parseInt(item.dom.el.dataset.price);
-        return price >= min && price <= max;
-    });
-}
+   
+   
+})
 
-minInput.addEventListener('input', applyPriceFilter);
-maxInput.addEventListener('input', applyPriceFilter);
 
-// ---------------------------------------------
-//  СОРТИРОВКА
-// ---------------------------------------------
-document.getElementById('sort-price-asc')?.addEventListener('click', function() {
-    mixer.sort('data-price:asc');
-});
 
-document.getElementById('sort-price-desc')?.addEventListener('click', function() {
-    mixer.sort('data-price:desc');
-});
 
-});
+
+
